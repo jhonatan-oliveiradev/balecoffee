@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1f1517;
+  color: #ffffff;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.emphasis {
+  text-transform: uppercase;
+  color: #a45a49;
+  font-family: "Epilogue";
+  font-size: 0.875rem;
+  margin-bottom: 0.625rem;
+}
+
+/* GENERAL STYLES */
+.main-header {
+  padding: 1rem 0;
+  max-width: 1280px;
+  margin: 0 auto;
+  z-index: 20;
+}
+.main-header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-header nav .logo {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Teko", sans-serif;
+}
+.main-header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-header nav ul li {
+  margin-left: 2rem;
+  opacity: 50%;
+  transition: all 0.2s ease-in-out;
+}
+.main-header nav ul li:hover, .main-header nav ul li.active {
+  opacity: 100%;
+}
+.main-header nav ul li:first-child {
+  margin-left: 0;
+}
+.main-header nav .github-anchor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a45a49;
+  color: #ffffff;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease-in-out;
+}
+.main-header nav .github-anchor:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+main .bg-hero {
+  background-color: #181012;
+}
+main .bg-hero .s-hero {
+  padding: 0 2rem;
+  margin: auto;
+  overflow: clip;
+}
+main .bg-hero .s-hero .hero-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6rem;
+}
+main .bg-hero .s-hero .hero-container .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .bg-hero .s-hero .hero-container .left h1 {
+  font-family: "Montserrat";
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 120%; /* 4.2rem */
+  max-width: 30rem;
+  margin-bottom: 1.12rem;
+}
+main .bg-hero .s-hero .hero-container .left hr {
+  width: 15rem;
+  height: 0.125rem;
+  border-color: #a45a49;
+  margin-bottom: 1.12rem;
+}
+main .bg-hero .s-hero .hero-container .left h2 {
+  color: #c7bab3;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 156%; /* 1.95rem */
+  max-width: 30rem;
+}
+main .bg-hero .s-hero .hero-container .left h2 strong {
+  font-weight: 700;
+}
+main .bg-hero .s-hero .hero-container .right {
+  max-width: 45%;
+  -moz-column-count: 4;
+       column-count: 4;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  margin: -1rem;
+}
+main .bg-hero .s-hero .hero-container .right figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.5rem;
+}
+main .s-cta {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  transform: translate(0, -50%);
+}
+main .s-cta button {
+  background: #a45a49;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+main .s-cta button:hover img {
+  animation: btnAnim 1s linear infinite;
+}
+main .s-recipes {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 5.5rem;
+  margin: auto;
+}
+main .s-recipes .h-recipes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .s-recipes .h-recipes h2 {
+  color: #fff2e7;
+  font-family: "Montserrat";
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 120%; /* 2.4rem */
+}
+main .s-recipes .h-recipes p {
+  color: #c7bab3;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 148%; /* 1.665rem */
+  margin-bottom: 2rem;
+}
+main .s-recipes .card-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+main .s-recipes .card-container .card {
+  background-color: #241a1c;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-basis: 49%;
+}
+main .s-recipes .card-container .card .h-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+main .s-recipes .card-container .card .h-card .h-card-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .s-recipes .card-container .card .h-card .h-card-left .yellow {
+  color: #e7a80e;
+}
+main .s-recipes .card-container .card .h-card .h-card-left h3 {
+  color: #fff2e7;
+  font-family: "Montserrat";
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 120%; /* 1.5rem */
+  letter-spacing: -0.025rem;
+}
+main .s-recipes .card-container .card .h-card .h-card-right {
+  color: #756a67;
+  line-height: 132%; /* 1.32rem */
+}
+main .s-recipes .card-container .card p {
+  color: #c7bab3;
+  font-weight: 400;
+  line-height: 140%; /* 1.4rem */
+}
+main .s-recipes .card-container .card .b-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+main .s-recipes .card-container .card .b-card span {
+  color: #c7bab3;
+  font-size: 0.75rem;
+}
+main .s-recipes .load-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 4rem 0;
+}
+main .s-recipes .load-more button {
+  background: transparent;
+  color: #c7bab3;
+  font-weight: 400;
+  line-height: 148%; /* 1.48rem */
+  transition: all 0.2s ease-in-out;
+}
+main .s-recipes .load-more button:hover {
+  color: #ffffff;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 4rem;
+  background-color: #23181a;
+}
+.footer .copy {
+  color: #fff2e7;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.footer .copy strong {
+  font-weight: 600;
+}
+.footer .autor {
+  color: rgba(255, 242, 231, 0.5);
+  font-size: 0.875rem;
+}
+.footer .autor a {
+  color: rgba(255, 242, 231, 0.5);
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+.footer .autor a:hover {
+  text-decoration: underline;
+}
+
+@keyframes btnAnim {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=style.css.map */
